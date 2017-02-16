@@ -14,12 +14,22 @@
 	</div>
 </footer>
 <script>
-    $('.container-center').css({
-        position:'absolute',
-        left: ($(window).width() - $('.div1').outerWidth())/2,
-//        top: ($(window).height() - $('.div1').outerHeight())/2 + $(document).scrollTop()
+//    $('.container-center').css({
+//        position:'absolute',
+//        left: ($(window).width() - $('.div1').outerWidth())/2,
+////        top: ($(window).height() - $('.div1').outerHeight())/2 + $(document).scrollTop()
+//    });
+    $(window).resize(function(){
+        $('.container-center').css({
+            position:'absolute',
+            left: ($(window).width() - $('.container-center').outerWidth())/2,
+//            top: ($(window).height() - $('.container-center').outerHeight())/2 + $(document).scrollTop()
+        });
     });
+    //初始化函数
+    $(window).resize();
 </script>
+
 
 <script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/styles/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
