@@ -24,6 +24,6 @@ FB:
   comments :
     provider : duoshuo
     duoshuo:
-        short_name :
+        short_name : dinozhang
     disqus :
         short_name :
