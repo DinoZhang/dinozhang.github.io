@@ -7,6 +7,7 @@ url: http://dinozhang.org
 baseurl: ''
 motto: DinoZhang's Blog
 banner: Stay hungry, stay foolish.
+github: https://github.com/dinozhang/
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
