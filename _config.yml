@@ -8,6 +8,7 @@ baseurl: ''
 motto: DinoZhang's Blog
 banner: Stay hungry, stay foolish.
 github: https://github.com/dinozhang/
+resume_site: http://dinozhang.org/resumecards/
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
