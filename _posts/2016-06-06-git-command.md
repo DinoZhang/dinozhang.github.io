@@ -22,11 +22,15 @@ tag: git
 
 * `git branch -a` 查看所有分支，包括远程的
 
+* `git branch -d branch_name` 删除分支（-D 强制删除）
+
 * `git checkout` 切换分支
 
 * `git checkout -b new_branch_name` 本地创建新分支(`git branch new_branch_name`，`git checkout new_branch_name`)
 
 * `git push origin new_branch_name` 把新分支推送到远端
+
+* `git push origin --delete branch_name` 删除远程分支
 
 * `git pull` 拉取远端(`git fetch` ,`git merge`)
 
