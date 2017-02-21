@@ -78,6 +78,3 @@ tag: git
 
 * `git config --global user.email youremail@email.com` 配置邮箱
 
-参考
-***
-> [https://git-scm.com/book/zh/v2/](https://git-scm.com/book/zh/v2/)
