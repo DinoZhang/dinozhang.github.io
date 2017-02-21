@@ -1,7 +1,7 @@
 # Site settings
 name: DinoZhang
 email: victordinozhang@gmail.com
-author: Dino Zhang
+author: DinoZhang
 url: http://dinozhang.org
 ### baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''
 baseurl: ''
