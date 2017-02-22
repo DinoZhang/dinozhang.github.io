@@ -12,6 +12,7 @@ tag: maven
 修改conf目录下settings.xml
 
 ```
+  
   <mirrors>
     <mirror>
       <id>alimaven</id>
@@ -20,4 +21,5 @@ tag: maven
       <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
+  
 ```
