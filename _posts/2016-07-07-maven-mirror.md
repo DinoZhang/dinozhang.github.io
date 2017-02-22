@@ -11,7 +11,8 @@ tag: maven
 
 修改conf目录下settings.xml
 
->  <mirrors>
+```
+  <mirrors>
     <mirror>
       <id>alimaven</id>
       <name>aliyun maven</name>
@@ -19,3 +20,4 @@ tag: maven
       <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
+```
