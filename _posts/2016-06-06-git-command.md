@@ -28,6 +28,8 @@ tag: git
 
 * `git checkout -b new_branch_name` 本地创建新分支(`git branch new_branch_name`，`git checkout new_branch_name`)
 
+* `git checkout file-name` 撤销未提交(`git checkout *.java`，`git checkout .`)
+
 * `git push origin new_branch_name` 把新分支推送到远端
 
 * `git push origin --delete branch_name` 删除远程分支
@@ -78,3 +80,4 @@ tag: git
 
 * `git config --global user.email youremail@email.com` 配置邮箱
 
+* `git log` 查看日志
