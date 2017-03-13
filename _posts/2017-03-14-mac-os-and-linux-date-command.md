@@ -11,7 +11,7 @@ tag: shell
 
 ## Mac OS
 
-**Mac OS**使用**AT&T UNIX**版本。
+**Mac OS**使用**AT&T UNIX**版本**date**命令。
 
 * `date` 当前时间
 > 2017年 3月13日 星期一 23时48分07秒 CST
@@ -36,7 +36,7 @@ tag: shell
 
 ## Linux
 
-**Linux**使用**GNU**版本。
+**Linux**使用**GNU**版本**date**命令。
 
 * `date -s "2008-05-23 01:01:01"` 设置系统时间(root)
 
