@@ -81,3 +81,5 @@ tag: git
 * `git config --global user.email youremail@email.com` 配置邮箱
 
 * `git log` 查看日志
+
+* `git diff --staged` 比较版本(`git diff --cached`，`git diff HEAD`，`git diff master1 master2`)
