@@ -82,4 +82,4 @@ tag: git
 
 * `git log` 查看日志
 
-* `git diff --staged` 比较版本(`git diff --cached`，`git diff HEAD`，`git diff master1 master2`)
+* `git diff` 比较版本(`git diff --cached`，`git diff HEAD`，`git diff master1 master2`)
