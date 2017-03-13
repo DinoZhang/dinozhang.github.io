@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mac OS和Linux下`date`命令异同比较"
+title:  "Mac OS和Linux下date命令异同比较"
 date:   2017-03-14 12:29:00 +0800
 categories: linux
 tag: shell
@@ -8,8 +8,6 @@ tag: shell
 
 * content
 {:toc}
-
-# Mac OS和Linux下`date`命令异同比较
 
 ## Mac OS
 
