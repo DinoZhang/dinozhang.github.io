@@ -34,6 +34,9 @@ tag: ['shell', 'Mac']
 * `date -v-1d "+%Y-%m-%d %H:%M:%S"` 减一天格式化shuchu
 > 2017-03-13	00:15:07
 
+* `date "+%N"` N
+> N
+
 ## Linux
 
 **Linux**使用**GNU**版本**date**命令。
@@ -71,6 +74,9 @@ tag: ['shell', 'Mac']
 
 *  `date -d "jan 14 -2 weeks" +%Y-%m-%d` 两周前
 > 2016-12-31
+
+* `date "+%N"` nanoseconds(000000000-999999999)
+> 532833721
 
 ## 用法相同
 
