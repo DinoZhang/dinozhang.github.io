@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "当访问google时发生了什么"
+title:  "当访问Google时发生了什么"
 date:   2017-03-08 12:29:00 +0800
 categories: web
 tag: google
