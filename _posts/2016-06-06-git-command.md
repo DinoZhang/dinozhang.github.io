@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "git 常用命令"
+title:  "Git 常用命令"
 date:   2016-06-06 12:29:00 +0800
-categories: git
-tag: git
+categories: Git
+tag: Git
 ---
 
 * content

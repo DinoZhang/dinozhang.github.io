@@ -2,8 +2,8 @@
 layout: post
 title:  "When You Say Nothing At All!"
 date:   2017-02-17 12:29:00 +0800
-categories: life
-tag: music
+categories: Life
+tag: Music
 ---
 
 * content
