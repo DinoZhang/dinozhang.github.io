@@ -9,6 +9,8 @@ tag: ['Shell', 'Mac']
 * content
 {:toc}
 
+---
+
 ## Mac OS
 
 **Mac OS**使用**AT&T UNIX**版本**date**命令。
