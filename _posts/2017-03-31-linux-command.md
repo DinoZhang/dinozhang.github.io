@@ -14,35 +14,45 @@ categories: Linux
 ## 目录文件
 
 * `cd`变换目录
+
 > cd ~
 
 * `pwd`显示目前的目录
 
 * `mkdir`创建一个新的目录
+
 > mkdir test
 
 * `rmdir`删除一个空的目录
+
 > rmdir test
 
 * `rm` 删除(**慎用 rm -rf**)
+
 >
 rm -f test （force 强制）
+>
 >
 rm -r test (recursive 递归)
 
 * `mv` 移动（删除）文件
+
 > mv a.txt b.txit
 
 * `cp` 复制
+
 > cp a.txt /admin/test
 
 * `touch` 新建文件
+
 > touch a.txt
 
 * `vim` vim编辑文件
+
 > vim a.txit
 
 * `cat` 连接显示文件
+
 >
 cat a.txt （显示文件）
 >
@@ -55,32 +65,41 @@ cat /etc/issue  (linux版本信息)
 cat /proc/version （linux版本信息）
 
 * `tac` 反向显示文件
+
 > tac a.txt
 
 * `nl` 显示行号
+
 > nl a.txt
 
 * `scp` 远程复制
+
 >  scp user@server:/home/admin/2017-03-31.log .
 
 * `ls` 列出文件
+
 >
 ls -al （所有文件及详细信息）
 >
 ls -lh  （详细信息文件大小`–human-readable`）
+
 * `chmod` 权限 (d:目录 r:读4 w:写2 x:执行2)
+
 >chmod 751 filename
 
 * `tar` 压缩（c:create x:extract v:verbosely f:file）
+
 >
 tar cvf FileName.tar DirName (压缩)
 >
 >tar xvf FileName.tar （ 解压）
 
 * `chown` 文件拥有者
+
 > chown
 
 * `wc` wordcount(line word byte)
+
 >  wc a.txt
 >
 >2 2 4 a.txt
@@ -88,6 +107,7 @@ tar cvf FileName.tar DirName (压缩)
 ### 查看文件内容
 
 * `more` 查看文件 (`space`:下一页 b:上一页）
+
 >
 more 2017-03-31.log
 >
@@ -96,6 +116,7 @@ more 2017-03-31.log
 b:上一页
 
 * `less` 查看文件
+
 >  less 2017-03-31.log
 >
 G （行尾）
@@ -121,6 +142,7 @@ ps -ef |less
 history | less
 
 * `tail` 查看文件
+
 >
 >tail -n 5 2017-03-31.log (显示后5行)
 >
