@@ -3,7 +3,7 @@ layout: post
 title:  "数据库事务"
 date:   2016-10-10 12:29:00 +0800
 categories: 数据库
-tag:  ['MySql', 'Spring']
+tag:  ['MySQL', 'Spring']
 ---
 
 * content

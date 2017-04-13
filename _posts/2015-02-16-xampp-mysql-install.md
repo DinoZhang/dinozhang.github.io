@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "关于XAMPP环境MySql服务无法启动的解决方法"
+title:  "关于XAMPP环境MySQL服务无法启动的解决方法"
 date:   2015-02-16 12:29:00 +0800
 categories: 数据库
-tag: ['MySql', 'XAMPP']
+tag: ['MySQL', 'XAMPP']
 ---
 
 * content

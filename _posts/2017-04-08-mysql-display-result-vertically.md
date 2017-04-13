@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "MySql垂直输出查询结果"
+title:  "MySQL垂直输出查询结果"
 date:   2017-04-08 12:29:00 +0800
-categories: MySql
-tag: 
+categories: 数据库
+tag: MySQL
 ---
 
 * content
