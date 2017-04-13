@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MySQL  'on duplicate key update' 用法
+title:  "MySQL 'on duplicate key update' 用法"
 date:   2016-08-13 13:31:01 +0800
 categories: 数据库
 tag: MySQL
@@ -11,8 +11,8 @@ tag: MySQL
 
 ---
 
->If you specify ON DUPLICATE KEY UPDATE, and a row is inserted that would cause a duplicate value in a UNIQUE index or PRIMARY KEY, MySQL performs an UPDATE of the old row. For example, if column a is declared as UNIQUE and contains the value 1, the following two statements have similar effect:
-
+>
+If you specify ON DUPLICATE KEY UPDATE, and a row is inserted that would cause a duplicate value in a UNIQUE index or PRIMARY KEY, MySQL performs an UPDATE of the old row. For example, if column a is declared as UNIQUE and contains the value 1, the following two statements have similar effect:
 >
 ```
 INSERT INTO table (a,b,c) VALUES (1,2,3) 
