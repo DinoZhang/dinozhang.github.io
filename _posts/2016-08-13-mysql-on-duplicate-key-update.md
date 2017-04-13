@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Maven mirror"
+title:  "MySQL  'on duplicate key update' 用法
 date:   2016-08-13 13:31:01 +0800
 categories: 数据库
-tag: MySQLgit
+tag: MySQL
 ---
 
 * content
