@@ -137,9 +137,9 @@ N (反向重复前一个搜索)
 >
 q (退出)
 >
-ps -ef |less
+ps -ef \|less
 >
-history | less
+history \| less
 
 * `tail` 查看文件
 
@@ -203,7 +203,7 @@ history | less
 >
 >./data.sh
 >
->find . -type d | sort (查找当前所有目录并排序)
+>find . -type d \| sort (查找当前所有目录并排序)
 >
 >.
 >
@@ -263,7 +263,7 @@ history | less
 >
 >14650 pts/3    00:00:00 ps
 
->ps -ef|grep ssh (与grep同时使用)
+>ps -ef\|grep ssh (与grep同时使用)
 >
 >root      4371     1  0  2016 ?        00:00:04 /usr/sbin/sshd
 
