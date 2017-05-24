@@ -152,6 +152,20 @@ history \| less
              the input.  The -f option is ignored if the standard input is a
              pipe, but not if it is a FIFO.
 
+* `grep` 查看文件（过滤）
+
+>
+grep 'log'  log.log
+>
+grep -c 'log'  log.log (行的数量)
+
+* `sed` 查看文件（编辑）
+
+>
+sed  -n '/6000060171931546/p' 2016-12-08.log (查找输出，不显示原内容)
+>
+grep -c 'log'  log.log (行的数量)
+
 ### 查找文件
 
 * `which` 查看可执行文件的位置
