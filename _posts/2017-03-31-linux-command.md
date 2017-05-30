@@ -281,6 +281,9 @@ grep -c 'log'  log.log (行的数量)
 >
 >root      4371     1  0  2016 ?        00:00:04 /usr/sbin/sshd
 
+>ps -eo pid,lstart,etime \| grep 18557
+>
+>56627 日  5/28 22:48:31 2017      01-17:20:38
 
 *  `kill`
 
