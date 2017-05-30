@@ -13,7 +13,15 @@ tag:  ['Redis', 'Java']
 
 ## 原理
 
->SORT key [BY pattern] [LIMIT offset count] [GET pattern [GET pattern ...]] [ASC|DESC] [ALPHA] [STORE destination]
+>
+```
+SORT key 
+[BY pattern] 
+[LIMIT offset count] 
+[GET pattern [GET pattern ...]] 
+[ASC|DESC] 
+[ALPHA] [STORE destination]
+```
 >
 >返回或保存给定列表、集合、有序集合 key 中经过排序的元素。
 
