@@ -24,8 +24,8 @@ markdown: kramdown
 
 FB:
   comments :
-    provider : netease
+    provider : disqus
     duoshuo:
         short_name : dinozhang
     disqus :
-        short_name :
+        short_name : dinozhang
