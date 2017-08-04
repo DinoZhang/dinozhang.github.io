@@ -30,12 +30,12 @@ com.google.gson.JsonSyntaxException: 2017-08-03 20:04:21
 
 ## code:
 
-
-    ```
-	Gson gson = new Gson();
-    String dataAsJson = "{\"planTime\":\"2017-08-03 17:28:45\"}";
-    RequirementPlanDTO requirementPlanDTO = gson.fromJson(dataAsJson, A.class);  
-    ```    
+    
+ ```
+ Gson gson = new Gson();
+ String dataAsJson = "{\"planTime\":\"2017-08-03 17:28:45\"}";
+ A a = gson.fromJson(dataAsJson, A.class);  
+ ```   
         
 ## fix:
 
@@ -43,5 +43,5 @@ com.google.gson.JsonSyntaxException: 2017-08-03 20:04:21
  ```
  Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
  String dataAsJson = "{\"planTime\":\"2017-08-03 17:28:45\"}";
- RequirementPlanDTO requirementPlanDTO = gson.fromJson(dataAsJson, A.class);      
+ A a = gson.fromJson(dataAsJson, A.class);      
  ```
