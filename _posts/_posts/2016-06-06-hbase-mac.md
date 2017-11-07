@@ -1,0 +1,139 @@
+---
+layout: post
+title:  "Hbase 使用"
+date:   2016-06-06 12:29:00 +0800
+categories: Hbase
+tag: Hbase
+---
+
+* content
+{:toc}
+
+---
+
+# Hbase 使用
+
+## 安装
+
+```
+brew install hbase
+```
+
+
+## 启动
+
+```
+nohup hbase master start > /dev/null &
+```
+
+jps
+
+```
+59536
+75489 Jps
+74454 Main
+75355 HMaster
+```
+## 基本操作
+
+进入`shell`
+
+```
+hbase shell
+
+```
+列出表
+
+```
+list
+```
+
+状态
+
+```
+status
+```
+
+创建表
+
+```
+
+create 'student','description','course'
+```
+
+插入数据
+
+```
+put 'student', 'row1', 'description:age', '18'  
+put 'student', 'row1', 'description:name', 'liu'
+put 'student', 'row1', 'course:chinese', '100'
+
+```
+
+扫描全表
+
+```
+scan 'student'
+```
+
+>
+```
+ROW                                                  COLUMN+CELL
+ row1                                                column=course:chinese, timestamp=1510037428906, value=100
+ row1                                                column=description:age, timestamp=1510037306159, value=18
+ row1                                                column=description:name, timestamp=1510037415404, value=liu
+1 row(s) in 0.0410 seconds
+```
+
+获取指定行
+
+```
+get 'student','row1'
+```
+>
+```
+COLUMN                                               CELL
+ course:chinese                                      timestamp=1510037428906, value=100
+ description:age                                     timestamp=1510037306159, value=18
+ description:name                                    timestamp=1510037415404, value=liu
+```
+
+获取指定列
+
+```
+get 'student','row1',{COLUMN => 'course'}
+```
+
+> 
+```
+COLUMN                                               CELL
+ course:chinese                                      timestamp=1510037428906, value=100
+1 row(s) in 0.0080 seconds
+```
+
+获取列蔟
+
+```
+ get 'student','row1','description'
+```
+
+>
+```
+COLUMN                                               CELL
+ description:age                                     timestamp=1510037306159, value=18
+ description:name                                    timestamp=1510037415404, value=liu
+2 row(s) in 0.0300 seconds
+```
+
+失效／生效
+
+```
+disable 'student'
+enable 'student'
+```
+
+删除
+
+```
+drop 'student'
+```
