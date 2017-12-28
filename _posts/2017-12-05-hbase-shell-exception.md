@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Hbase 使用"
-date:   2016-06-06 12:29:00 +0800
+title:  "Hbase Shell Exception"
+date:   2017-12-05 12:29:00 +0800
 categories: Hbase
 tag: Hbase
 ---
@@ -11,129 +11,39 @@ tag: Hbase
 
 ---
 
-# Hbase 使用
+# Hbase Shell Exception
 
-## 安装
-
-```
-brew install hbase
-```
-
-
-## 启动
-
-```
-nohup hbase master start > /dev/null &
-```
-
-jps
-
-```
-59536
-75489 Jps
-74454 Main
-75355 HMaster
-```
-## 基本操作
-
-进入`shell`
-
-```
-hbase shell
-
-```
-列出表
-
-```
-list
-```
-
-状态
-
-```
-status
-```
-
-创建表
-
-```
-
-create 'student','description','course'
-```
-
-插入数据
-
-```
-put 'student', 'row1', 'description:age', '18'  
-put 'student', 'row1', 'description:name', 'liu'
-put 'student', 'row1', 'course:chinese', '100'
-
-```
-
-扫描全表
-
-```
-scan 'student'
-```
+## 日志
 
 >
-```
-ROW                                                  COLUMN+CELL
- row1                                                column=course:chinese, timestamp=1510037428906, value=100
- row1                                                column=description:age, timestamp=1510037306159, value=18
- row1                                                column=description:name, timestamp=1510037415404, value=liu
-1 row(s) in 0.0410 seconds
-```
+2017-12-05 17:41:47,911 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+NativeException: java.io.IOException: java.lang.reflect.InvocationTargetException
+  initialize at /Users/dinozhang/git/alihbase-1.1.1/bin/../lib/ruby/hbase/hbase.rb:42
+      (root) at /Users/dinozhang/git/alihbase-1.1.1/bin/../bin/hirb.rb:118
 
-获取指定行
 
-```
-get 'student','row1'
-```
->
-```
-COLUMN                                               CELL
- course:chinese                                      timestamp=1510037428906, value=100
- description:age                                     timestamp=1510037306159, value=18
- description:name                                    timestamp=1510037415404, value=liu
-```
+## 原因
 
-获取指定列
+`hbase-site.xml`文件中异常换行或空格
 
 ```
-get 'student','row1',{COLUMN => 'course'}
+<configuration>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>
+        zk
+        </value>
+    </property>
+</configuration>
 ```
 
-> 
-```
-COLUMN                                               CELL
- course:chinese                                      timestamp=1510037428906, value=100
-1 row(s) in 0.0080 seconds
-```
-
-获取列蔟
+fix:
 
 ```
- get 'student','row1','description'
-```
-
->
-```
-COLUMN                                               CELL
- description:age                                     timestamp=1510037306159, value=18
- description:name                                    timestamp=1510037415404, value=liu
-2 row(s) in 0.0300 seconds
-```
-
-失效／生效
-
-```
-disable 'student'
-enable 'student'
-```
-
-删除
-
-```
-drop 'student'
+<configuration>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>zk</value>
+    </property>
+</configuration>
 ```
