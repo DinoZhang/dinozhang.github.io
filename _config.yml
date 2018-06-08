@@ -18,6 +18,9 @@ nickname: 'DinoZhang'
 bio: 'Stay hungry, stay foolish.'
 avatar: '/assets/img/profile.png'
 
+
+permalink: /:year/:month/:day/:title/
+
 # Search
 search: true
 
