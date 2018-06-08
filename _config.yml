@@ -26,7 +26,7 @@ nightMode: true
 
 # Comments
 disqus: true
-disqus_url: 'https://dinogzhang-blog.disqus.com/embed.js'
+disqus_url: 'https://dinozhang-org.disqus.com/embed.js'
 
 # Share
 social-share: true

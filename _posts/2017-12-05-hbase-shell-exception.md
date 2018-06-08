@@ -26,7 +26,7 @@ NativeException: java.io.IOException: java.lang.reflect.InvocationTargetExceptio
 
 `hbase-site.xml`文件中异常换行或空格
 
-```
+```xml
 <configuration>
     <property>
         <name>hbase.zookeeper.quorum</name>
@@ -39,7 +39,7 @@ NativeException: java.io.IOException: java.lang.reflect.InvocationTargetExceptio
 
 fix:
 
-```
+```xml
 <configuration>
     <property>
         <name>hbase.zookeeper.quorum</name>

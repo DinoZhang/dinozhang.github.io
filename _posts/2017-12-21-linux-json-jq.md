@@ -21,13 +21,13 @@ https://github.com/stedolan/jq
 
 CentOS
 
-```
+```bash
 sudo yum install jq -y
 ```
 
 Mac OS X
 
-```
+```bash
 brew install jq
 ```
 
@@ -36,23 +36,23 @@ brew install jq
 
 * 获取数据（以天气为例）
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E
 ```
 
-```
+```bash
 {"date":"20180404","message":"Success !","status":200,"city":"杭州","count":776,"data":{"shidu":"88%","pm25":40.0,"pm10":77.0,"quality":"良","wendu":"20","ganmao":"极少数敏感人群应减少户外活动","yesterday":{"date":"03日星期二","sunrise":"05:48","high":"高温 27.0℃","low":"低温 17.0℃","sunset":"18:19","aqi":53.0,"fx":"南风","fl":"<3级","type":"阵雨","notice":"阵雨来袭，出门记得带伞"},"forecast":[{"date":"04日星期三","sunrise":"05:47","high":"高温 24.0℃","low":"低温 15.0℃","sunset":"18:20","aqi":72.0,"fx":"东北风","fl":"3-4级","type":"阵雨","notice":"阵雨来袭，出门记得带伞"},{"date":"05日星期四","sunrise":"05:46","high":"高温 20.0℃","low":"低温 10.0℃","sunset":"18:20","aqi":78.0,"fx":"北风","fl":"4-5级","type":"中雨","notice":"记得随身携带雨伞哦"},{"date":"06日星期五","sunrise":"05:45","high":"高温 18.0℃","low":"低温 9.0℃","sunset":"18:21","aqi":61.0,"fx":"西北风","fl":"4-5级","type":"多云","notice":"阴晴之间，谨防紫外线侵扰"},{"date":"07日星期六","sunrise":"05:44","high":"高温 16.0℃","low":"低温 7.0℃","sunset":"18:21","aqi":58.0,"fx":"西北风","fl":"4-5级","type":"晴","notice":"愿你拥有比阳光明媚的心情"},{"date":"08日星期日","sunrise":"05:43","high":"高温 21.0℃","low":"低温 11.0℃","sunset":"18:22","aqi":52.0,"fx":"西南风","fl":"<3级","type":"晴","notice":"愿你拥有比阳光明媚的心情"}]}}
 ```
 
 * 使用`jq`格式化
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq
 ```
 
 
 
-```
+```javascript
 {
   "date": "20180404",
   "message": "Success !",
@@ -146,12 +146,12 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
 
 * 获取元素
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq .data.yesterday
 ```
 
 
-```
+```javascript
 {
   "date": "03日星期二",
   "sunrise": "05:48",
@@ -169,11 +169,11 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
 
 * 获取数组元素
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq .data.forecast[0]
 ```
 
-```
+```javascript
 {
   "date": "04日星期三",
   "sunrise": "05:47",
@@ -191,11 +191,11 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
 
 * 获取多个数据元素
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq .data.forecast[0,1]
 ```
 
-```
+```javascript
 {
   "date": "04日星期三",
   "sunrise": "05:47",
@@ -224,11 +224,11 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
 
 * 获取所有元素
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq .data.forecast[]
 ```
 
-```
+```javascript
 {
   "date": "04日星期三",
   "sunrise": "05:47",
@@ -299,23 +299,23 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
  * 加减运算
  
 
-```
+```bash
  echo "{\"a\": 7}"|jq '.a + 1'
 ```
   
-  ```
+  ```bash
   8
   ```
  
  
  * 选择器
 
-```
+```bash
  echo '[1,2,3]' |jq ' map(select(. >= 2))'
 ```
  
  
- ```
+ ```bash
  [
   2,
   3
@@ -324,33 +324,33 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
  
  * 向下取整
 
-```
+```bash
 echo '999.99'|jq 'floor'
 ```
  
- ```
+ ```bash
  999
  ```
  
 * 开方
 
-```
+```bash
 echo '999.99'|jq 'sqrt'
 ```
 
-```
+```bash
 31.6226184874055
 ```
  
  * 统计元素数量
  
  
-```
+```bash
  curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq '.data.forecast[] | length'
 ```
  
  
- ```
+ ```bash
 10
 10
 10
@@ -359,31 +359,31 @@ echo '999.99'|jq 'sqrt'
  ```
   * 统计数据长度
  
-```
+```bash
  curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq '.data.forecast | length'
 ```
  
- ```
+ ```bash
  5
  ```
  
  * 类型转换
 
-```
+```bash
  curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq '.data.yesterday.aqi| tostring'
 ```
  
- ```
+ ```bash
  "53"
  ```
 
 * 数组排序
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq '.data.forecast'|jq 'sort_by(.aqi)'|jq .[].aqi
 ```
 
-```
+```bash
 52
 58
 61
@@ -393,11 +393,11 @@ curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E 
 
 * 数组反转
 
-```
+```bash
 curl https://www.sojson.com/open/api/weather/json.shtml?city=%E6%9D%AD%E5%B7%9E |jq '.data.forecast'|jq 'sort_by(.aqi) |reverse'|jq .[].aqi
 ```
 
-```
+```bash
 78
 72
 61

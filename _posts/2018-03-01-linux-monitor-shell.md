@@ -14,7 +14,7 @@ tag: ['Linux']
 
 防止进程意外关闭，定时查询进程存在进行预警或重启。
 
-```
+```bash
 #!/bin/bash
 num=$(ps -ef|grep canal-1.0 -c)
 if [[ ${num} -lt 2 ]];then
@@ -31,13 +31,13 @@ fi
 
 
 
-```
+```bash
 */1 * * * *  /home/admin/canal_monitor.sh 2>&1 >> ～/canal_monitor.log
 ```
 
 查看监控执行日志
 
 
-```
+```bash
 sudo less /var/log/cron
 ```
