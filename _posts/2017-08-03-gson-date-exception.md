@@ -3,7 +3,7 @@ layout: post
 title:  "Gson Date 解析异常"
 date:   2017-08-03 13:31:01 +0800
 categories: Java
-tag: Gson
+tag:  ['Gson', 'Java']
 ---
 
 * content

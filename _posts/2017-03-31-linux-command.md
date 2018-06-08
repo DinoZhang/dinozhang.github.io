@@ -3,7 +3,7 @@ layout: post
 title:  "Linux 常用命令"
 date:   2017-03-31 12:29:00 +0800
 categories: Linux
-
+tag: ['Linux']
 ---
 
 * content

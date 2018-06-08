@@ -3,7 +3,7 @@ layout: post
 title:  "MyBatis typeHandlers"
 date:   2016-06-06 12:29:00 +0800
 categories: Java
-tag: MyBatis
+tag: ['MyBatis', 'Java']
 ---
 	
 * content

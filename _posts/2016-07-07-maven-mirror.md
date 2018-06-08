@@ -3,7 +3,7 @@ layout: post
 title:  "Maven mirror"
 date:   2016-07-07 13:31:01 +0800
 categories: Java
-tag: Maven
+tag: ['Maven', 'Java']
 ---
 
 * content
