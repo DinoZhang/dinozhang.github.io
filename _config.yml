@@ -1,5 +1,5 @@
 # Site settings 配置站点
-title: 'DinoZhang Blog'
+title: "DinoZhang's Blog"
 description: 'Stay hungry, stay foolish.'
 keyword: 'DinoZhang'
 url: 'http://dinozhang.org' # your host
@@ -25,7 +25,7 @@ search: true
 nightMode: true
 
 # Comments
-disqus: false
+disqus: true
 disqus_url: 'https://dinogzhang-blog.disqus.com/embed.js'
 
 # Share

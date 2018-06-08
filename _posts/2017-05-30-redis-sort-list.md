@@ -14,7 +14,7 @@ tag:  ['Redis', 'Java']
 ## 原理
 
 >
-```
+```bash
 SORT key 
 [BY pattern] 
 [LIMIT offset count] 
@@ -40,13 +40,13 @@ Redis存储：
 
 执行：
 
-```
+```bash
 127.0.0.1:6379> sadd testkey  111 2111 2122
 (integer) 3
 ```
 查看：
 
-```
+```bash
 127.0.0.1:6379> smembers testkey
 1) "111"
 2) "2111"
@@ -55,13 +55,13 @@ Redis存储：
 
 执行：
 
-```
+```bash
 127.0.0.1:6379> hset testkey1 data {\"id\":2111,\"nick\":\"tom\",\"updateTime\":1495437972186} updateTime 20170522152612 id 2111
 ```
 
 查看：
 
-```
+```bash
 127.0.0.1:6379> hgetall testkey1
 1) "data"
 2) "{\"id\":2111,\"nick\":\"tom\",\"updateTime\":1495437972186}"
@@ -75,7 +75,7 @@ Redis存储：
 
 查看：
 
-```
+```bash
 127.0.0.1:6379> keys testkey*
 1) "testkey2"
 2) "testkey0"
@@ -85,7 +85,7 @@ Redis存储：
 
 按照id降序：
 
-```
+```bash
 127.0.0.1:6379> SORT testkey by testkey*->id  get testkey*->data desc limit 0 3
 1) "{\"id\":2122,\"nick\":\"marry\",\"updateTime\":1494573972186}"
 2) "{\"id\":2111,\"nick\":\"tom\",\"updateTime\":1495437972186}"
@@ -100,7 +100,7 @@ Redis存储：
 
 生成排序列表：
 
-```
+```java
 
 	/**
 	 * generate sort list
@@ -147,7 +147,7 @@ Redis存储：
 ```
 
 排序接口：
-```
+```java
   /**
      * redis list sort
      * @param ns
@@ -184,7 +184,7 @@ Redis存储：
 ```
 
 测试：
-```
+```java
 /**
  * Created by dinozhang on 2017/5/8.
  */
@@ -227,7 +227,7 @@ public class RedisTest {
 
 ```
 Redis配置文件
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"

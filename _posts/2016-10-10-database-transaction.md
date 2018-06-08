@@ -25,7 +25,7 @@ tag:  ['MySQL', 'Spring']
 
 ## MySql 事务
 
-```
+```sql
 
   //开启事务
   start transaction／begin;
@@ -38,7 +38,7 @@ tag:  ['MySQL', 'Spring']
 
 ## JDBC 事务
 
-```
+```java
 
 	//URL指向要访问的数据库名s
 	String url = "jdbc:mysql://127.0.0.1:3306/test";
@@ -67,7 +67,7 @@ tag:  ['MySQL', 'Spring']
 
 **编程式事务**指的是通过编码方式实现事务，即类似于**JDBC**编程实现事务管理。管理使用`TransactionTemplate`或者直接使用底层的`PlatformTransactionManager`。对于编程式事务管理，**Spring**推荐使用`TransactionTemplate`。
 
-```
+```java
 
     public String modify(final Param param) {
         return transactionTemplate.execute(new TransactionCallback<String>() {
@@ -90,7 +90,7 @@ tag:  ['MySQL', 'Spring']
 
  context配置
 
-```
+```xml
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close">
 	    <property name="driverClassName" value="${driver}"/>
@@ -124,7 +124,7 @@ tag:  ['MySQL', 'Spring']
 
  context配置
 
-```
+```xml
 
 <tx:advice id="txadvice" transaction-manager="transactionManager">
     <tx:attributes>

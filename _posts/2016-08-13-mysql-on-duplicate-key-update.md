@@ -14,7 +14,7 @@ tag: MySQL
 >
 If you specify ON DUPLICATE KEY UPDATE, and a row is inserted that would cause a duplicate value in a UNIQUE index or PRIMARY KEY, MySQL performs an UPDATE of the old row. For example, if column a is declared as UNIQUE and contains the value 1, the following two statements have similar effect:
 >
-```
+```sql
 INSERT INTO table (a,b,c) VALUES (1,2,3) 
    ON DUPLICATE KEY UPDATE c=c+1;
 >

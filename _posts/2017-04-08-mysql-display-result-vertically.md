@@ -16,7 +16,7 @@ tag: MySQL
 
 普通输出：
 
-```
+```sql
 
 MariaDB [test]> select * from dnc_email limit 1;
 +----+--------------------------------------------------+-----------------------------------------------+--------+
@@ -30,7 +30,7 @@ MariaDB [test]> select * from dnc_email limit 1;
 
 垂直输出：
 
-```
+```sql
 
 MariaDB [test]> select * from dnc_email limit 1 \G
 *************************** 1. row ***************************
@@ -44,7 +44,7 @@ content: https://www.wikileaks.org/dnc-emails//get/1
 ```
 其他command见：
 
-```
+```sql
 
 MariaDB [test]> help
 

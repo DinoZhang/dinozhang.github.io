@@ -14,6 +14,7 @@ tag:  ['Gson', 'Java']
 
 ## error log:
 
+>
 ```
 com.google.gson.JsonSyntaxException: 2017-08-03 20:04:21
         at com.google.gson.internal.bind.DateTypeAdapter.deserializeToDate(DateTypeAdapter.java:74)
@@ -31,7 +32,7 @@ com.google.gson.JsonSyntaxException: 2017-08-03 20:04:21
 ## code:
 
     
- ```
+ ```java
  Gson gson = new Gson();
  String dataAsJson = "{\"planTime\":\"2017-08-03 17:28:45\"}";
  A a = gson.fromJson(dataAsJson, A.class);  
@@ -40,7 +41,7 @@ com.google.gson.JsonSyntaxException: 2017-08-03 20:04:21
 ## fix:
 
 
- ```
+ ```java
  Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
  String dataAsJson = "{\"planTime\":\"2017-08-03 17:28:45\"}";
  A a = gson.fromJson(dataAsJson, A.class);      

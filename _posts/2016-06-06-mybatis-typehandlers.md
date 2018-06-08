@@ -19,7 +19,7 @@ tag: ['MyBatis', 'Java']
 ## `typeHandlers`原理
 对于如下mapper
 
-```
+```sql
 <insert id="insertStudent" parameterType="Student">
     INSERT INTO STUDENTS(STUD_ID,NAME,EMAIL,BIRTH)
     VALUES(#{studId},#{name},#{email},#{birth})
@@ -27,14 +27,14 @@ tag: ['MyBatis', 'Java']
 ```
 执行预处理
 
-```
+```java
 PreparedStatement pstmt = connection.prepareStatement
                     ("INSERT INTO STUDENTS(STUD_ID,NAME,EMAIL,birth) VALUES(?,?,?,?)")
 ```
 
 通过使用类型处理器`typeHandlers`设置参数，对于`java.util.Date` 类型转会换为 `java.sql.Timestamp` 设值（见：`DateTypeHandler`）。
 
-```
+```java
 pstmt.setInt(1,student.getStudId());
 pstmt.setString(2, student.getName());
 pstmt.setString(3, student.getEmail());
@@ -43,7 +43,7 @@ pstmt.setTimestamp(4, new Timestamp(student.getBirth().getTime()));
 ## 自定义`typeHandlers`
 对于如下自定义枚举类型则需要新建`typeHandlers`
 
-```
+```java
 public enum ThirdPartyLogType {
 	ITEM(0, "商品"), TRADE(1, "订单"), SUPPLIER(2, "供应商");
 
@@ -84,7 +84,7 @@ public enum ThirdPartyLogType {
 
 `ThirdPartyLogTypeTypeHandler`如下：
 
-```
+```java
 @MappedTypes(ThirdPartyLogType.class)
 public class ThirdPartyLogTypeTypeHandler extends EnumTypeHandler<ThirdPartyLogType> {
     public ThirdPartyLogTypeTypeHandler(Class<ThirdPartyLogType> type) {
@@ -123,8 +123,11 @@ public class ThirdPartyLogTypeTypeHandler extends EnumTypeHandler<ThirdPartyLogT
 
 对于自定义`typeHandlers`需要注册，可以使用`SqlSessionFactory`中的`typeHandlersPackage`或`typeHandlers`进行注册
 
-    <bean id="sqlSessionFactory" class="org.mybatis.HgjSqlSessionFactoryBean">
+```xml
+   <bean id="sqlSessionFactory" class="org.mybatis.HgjSqlSessionFactoryBean">
         <property name="mapperLocations" value="classpath*:org/dinozhang/**/dao/xml/**/*.xml"></property>
         <property name="dataSource" ref="dataSource" />
         <property name="typeHandlersPackage" value="org.dinozhang.typehandler"/>
-    </bean>
+   </bean>
+```
+    

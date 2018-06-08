@@ -14,7 +14,7 @@ tag: ['Python']
 
 使用`Python`快速搭建`Web`服务
 
-```
+```python
 python -m SimpleHTTPServer 8000
 
 ```
@@ -22,14 +22,14 @@ python -m SimpleHTTPServer 8000
 
 `Python3`
 
-```
+```python
 python3 -m http.server 8000
 ```
 
 
 进入文件目录，后台持续运行
 
-```
+```bash
 nohup python3 -m http.server 8000 >> ~/out.log 2>&1 &
 ```
 

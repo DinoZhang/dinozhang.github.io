@@ -13,7 +13,7 @@ tag: ['Maven', 'Java']
 
 修改conf目录下settings.xml
 
-```
+```xml
   
   <mirrors>
     <mirror>
