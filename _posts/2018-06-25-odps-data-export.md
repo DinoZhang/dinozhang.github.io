@@ -28,39 +28,9 @@ tag: ['ODPS','Java']
  
 ##  实现
  
- ```
-import static com.aliyun.odps.OdpsType.DATETIME;
-
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.lang.StringUtils;
-import org.joda.time.DateTime;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.aliyun.odps.Instance;
-import com.aliyun.odps.Odps;
-import com.aliyun.odps.account.Account;
-import com.aliyun.odps.account.AliyunAccount;
-import com.aliyun.odps.data.Record;
-import com.aliyun.odps.task.SQLTask;
-
-import so.dian.taylor.controller.BaseController;
-import so.dian.taylor.utills.CSVHelper;
-
-import lombok.extern.slf4j.Slf4j;
-
+ ```java
 /**
- * @author ${DinoZhang}
+ * @author ${Dino Zhang}
  * @version $Id: SqlTaskBase.java, v 0.1 2018年06月25日 下午5:56 Exp $
  */
 @Slf4j
@@ -145,7 +115,8 @@ public class SqlTaskBase extends BaseController {
  ```
  为什么`Iterator`可以避免`OOM`的问题？因为返回结果是`List`是将所有结果全部放入，而采用`Iterator`轻量级的遍历并选择序列中的对象。`Iterator`接口定义如下：
  
- ```
+ 
+ ```java
 package java.util;
 
 import java.util.function.Consumer;
