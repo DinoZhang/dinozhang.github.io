@@ -19,7 +19,16 @@ tag: ['Linux']
 num=$(ps -ef|grep canal-1.0 -c)
 if [[ ${num} -lt 2 ]];then
     echo  $(date)"失败"
-    nohup java -jar  ~/canal-1.0.jar >/dev/null  2>&1 &
+    nohup java -jar  ~/canal-1.0-SNAPSHOT-jar-with-dependencies.jar >> ~/canal_client.log  2>&1 &
+    token='token'
+    curl 'https://oapi.dingtalk.com/robot/send?access_token='$token'' \
+             -H 'Content-Type: application/json' \
+               -d '
+         {"msgtype": "text",
+               "text": {
+                 "content":"canal error"
+                   }
+                     } ' -s
     echo  $(date)"重启成功"
 fi
 ```
