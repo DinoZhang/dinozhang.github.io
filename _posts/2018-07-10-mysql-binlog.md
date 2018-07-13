@@ -12,7 +12,7 @@ tag: ['MySQL']
 ---
  * `binlog`格式
  
- ```sql
+ ```mysql
  show variables like 'binlog_format';
  ```
  
@@ -27,7 +27,7 @@ tag: ['MySQL']
  
  * 修改binlog_format
  
- ```sql
+ ```mysql
  set globle binlog_format='MIXED'
  
  vi /etc/my.cnf
@@ -35,14 +35,14 @@ tag: ['MySQL']
  
  * 开启binlog
  
- ```sql
+ ```mysql
  set sql_log_bin=1
  ```
  
  
  * binlog 是否打开
  
- ```sql
+ ```mysql
  show variables like 'log_bin';
  ```
  
@@ -57,7 +57,7 @@ tag: ['MySQL']
  
  * 获取binlog文件列表
  
- ```sql
+ ```mysql
  show binary logs;
  ```
  
@@ -80,7 +80,7 @@ tag: ['MySQL']
  
  * 查看当前正在写入的binlog文件
  
- ```sql
+ ```mysql
  show master status;
  ```
  ```
@@ -95,7 +95,7 @@ tag: ['MySQL']
  * 查看指定binlog文件的内容
  
  
- ```
+ ```mysql
  show binlog events in 'mysql-bin.000007'
  ```
  
@@ -128,7 +128,7 @@ tag: ['MySQL']
  
  * 其他`log`配置
  
- ```
+ ```mysql
  show variables like 'log_%';
  ```
  
