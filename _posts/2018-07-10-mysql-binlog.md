@@ -94,6 +94,14 @@ tag: ['MySQL']
  
  * 查看指定binlog文件的内容
  
+ 1.语法1
+ ```
+ show binlog events [IN 'log_name'] [FROM pos] [LIMIT [offset,] row_count]
+ ```
+ 2.语法2
+ ```
+ mysqlbinlog mysql-bin.000019 from 77866424 limi1
+ ```
  
  ```mysql
  show binlog events in 'mysql-bin.000007'
