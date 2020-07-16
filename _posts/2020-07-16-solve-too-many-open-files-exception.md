@@ -55,16 +55,6 @@ lsof -n  |awk '{print$2}'|sort |uniq -c |sort -k 1 -n -r |head -n 10
 ```java
 sudo lsof -n  |awk '{print$2}'|sort |uniq -c |sort -k 1 -n -r |head -n 10
     
-2076543 22936
- 169800 29982
- 121735 22961
-  76938 23817
-  67529 8843
-   6810 3578
-   1704 32368
-   1564 21104
-   1269 28460
-   1269 28459    
 ```
 
 
