@@ -41,16 +41,16 @@ Redis存储：
 执行：
 
 ```bash
-127.0.0.1:6379> sadd testkey  111 2111 2122
+127.0.0.1:6379> sadd testkey  0 1 2
 (integer) 3
 ```
 查看：
 
 ```bash
 127.0.0.1:6379> smembers testkey
-1) "111"
-2) "2111"
-3) "2122"
+1) "0"
+2) "1"
+3) "2"
 ```
 
 执行：
@@ -91,7 +91,7 @@ Redis存储：
 2) "{\"id\":2111,\"nick\":\"tom\",\"updateTime\":1495437972186}"
 3) "{\"id\":111,\"nick\":\"jack\",\"updateTime\":1493709972068}"
 ```
-
+BY testkey*->id: 这个部分要求 Redis 从与 testkey 相关的所有键中获取 id 字段
 
 
 
